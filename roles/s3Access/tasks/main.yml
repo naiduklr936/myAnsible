@@ -1,0 +1,8 @@
+---
+- name : Access to S3
+  shell : aws s3api put-bucket-acl --bucket "{{ bucket_name }}" --grant-full-control uri=http://acs.amazonaws.com/groups/global/AllUsers
+  environment:
+   AWS_ACCESS_KEY_ID : "{{ awsaccesskeyid }}"
+   AWS_SECRET_ACCESS_KEY : "{{ awssecretaccesskey }}"
+   AWS_DEFAULT_REGION : "{{ region }}"
+    

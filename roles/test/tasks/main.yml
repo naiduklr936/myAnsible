@@ -1,0 +1,4 @@
+---
+
+- name : display varibale
+  command : echo {{jenkins_hostname}}
